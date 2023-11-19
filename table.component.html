@@ -1,0 +1,42 @@
+<p>people list</p>
+<button (click)="addData()" >add</button>
+<form id='myform' class="row">
+    <input [(ngModel)]="formData.number"  class="form-control form-control-lg" type="text" placeholder="" aria-label=".form-control-lg example">
+    <input [(ngModel)]="formData.name" class="form-control form-control-lg" type="text" placeholder="" aria-label=".form-control-lg example">
+    <input [(ngModel)]="formData.username" class="form-control form-control-lg" type="text" placeholder="" aria-label=".form-control-lg example">
+    <input [(ngModel)]="formData.phone" class="form-control form-control-lg" type="text" placeholder="" aria-label=".form-control-lg example">
+</form>
+<table class="table">
+    <tr >
+        <th *ngFor="let x of tablehead">
+            {{ x}}
+        </th>
+        </tr>
+        <tr *ngFor="let item of people">
+            <td>
+                {{item.number}}
+            </td>
+        <td>
+            {{item.name}}
+        </td>
+        <td>
+            {{item.username}}
+        </td>
+        <td>
+            {{item.phone}}
+        </td>
+
+        <td *ngFor="let y of btn">
+           <button>{{y}}</button> 
+            
+        </td>
+    </tr>
+    
+    <tr *ngFor="let data of tableData">
+            <td>{{ data.number }}</td>
+            <td>{{ data.name }}</td>
+            <td>{{ data.username }}</td>
+            <td>{{ data.phone }}</td>
+          </tr>
+    
+  </table>
